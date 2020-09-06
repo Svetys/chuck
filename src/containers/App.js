@@ -1,10 +1,11 @@
 import React, { Component } from "react";
-import SearchBox from "./SearchBox";
-import SearchList from "./SearchList";
-import FactButton from "./FactButton";
+import SearchBox from "../components/SearchBox";
+import SearchList from "../components/SearchList";
+import FactButton from "../components/FactButton";
 import "./App.css";
 
 class App extends Component {
+  // State values
   constructor() {
     super();
     this.state = {
@@ -14,6 +15,7 @@ class App extends Component {
     };
   }
 
+  // Function for random fact
   randomFact = () => {
     this.setState({searchfield: '1'});
     this.setState({ searchlist: [] });
@@ -26,6 +28,7 @@ class App extends Component {
     })
   };
 
+  // Function for on search change
   onSearchChange = (event) => {
     const value = event.target.value;
     if (value.length > 2) {

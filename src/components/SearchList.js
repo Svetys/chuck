@@ -2,6 +2,7 @@ import React from "react";
 import FullList from "./FullList";
 import Loading from "./Loading";
 
+// A view of the result window
 const SearchList = ({ list, phrase, searchfield }) => {
 	if (list.length) {
 		return (<div>
